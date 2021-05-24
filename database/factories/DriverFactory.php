@@ -22,7 +22,10 @@ class DriverFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'first_name' => $this->faker->firstName,
+            'last_name' => $this->faker->lastName,
+            'phone' => $this->faker->e164PhoneNumber,
+            'birth_date' => $this->faker->date('Y-m-d', '2003-01-01'),
         ];
     }
 }

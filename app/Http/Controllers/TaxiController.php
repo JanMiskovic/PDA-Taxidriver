@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Driver;
+use App\Models\Taxi;
 use Illuminate\Http\Request;
 
-class DriverController extends Controller
+class TaxiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class DriverController extends Controller
      */
     public function index()
     {
-        $drivers = Driver::all();
-        return view('Driver.index', compact('drivers'));
+        $taxi = Taxi::all();
+        return view('taxi.index', compact('taxis'));
     }
 
     /**
@@ -25,8 +25,8 @@ class DriverController extends Controller
      */
     public function create()
     {
-        $driver = new Driver();
-        return view('driver.create_edit', compact('driver'));
+        $taxi = new Taxi();
+        return view('taxi.create_edit', compact('taxi'));
     }
 
     /**
@@ -37,57 +37,56 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        $driver = Driver::create($request->all());
-        return redirect()->route('driver.index');
+        $taxi = Taxi::create($request->all());
+        return redirect()->route('taxi.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Driver  $driver
+     * @param  \App\Models\Taxi  $taxi
      * @return \Illuminate\Http\Response
      */
-    public function show(Driver $driver)
+    public function show(Taxi $taxi)
     {
-        return view('driver.show', compact('driver'));
-        return redirect()->route('driver.index');
+        return view('taxi.show', compact('taxi'));
+        return redirect()->route('taxi.index');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Driver  $driver
+     * @param  \App\Models\Taxi  $taxi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Driver $driver)
+    public function edit(Taxi $taxi)
     {
-        return view('driver.create_edit', compact('driver'));
-        return redirect()->route('driver.index');
+        return view('taxi.create_edit', compact('taxi'));
+        return redirect()->route('taxi.index');
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Driver  $driver
+     * @param  \App\Models\Taxi  $taxi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Driver $driver)
+    public function update(Request $request, Taxi $taxi)
     {
-        $driver->update($request->all());
-        return redirect()->route('driver.index');
+        $taxi->update($request->all());
+        return redirect()->route('taxi.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Driver  $driver
+     * @param  \App\Models\Taxi  $taxi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Driver $driver)
+    public function destroy(Taxi $taxi)
     {
-        $driver->delete();
-        return redirect()->route('driver.index');
+        $taxi->delete();
+        return redirect()->route('taxi.index');
     }
 }
-

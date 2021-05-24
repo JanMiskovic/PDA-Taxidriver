@@ -6,16 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-
-class Driver extends Model
+class Taxi extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'phone',
-        'birth_date',
+        'model',
+        'color',
+        'kilometers',
+        'reg_plate',
     ];
 
     public function Shift(): hasMany

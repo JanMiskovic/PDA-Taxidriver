@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Driver;
+use App\Models\Taxi;
 use Illuminate\Database\Seeder;
 
-class DriverSeeder extends Seeder
+class TaxiSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class DriverSeeder extends Seeder
      */
     public function run()
     {
-        $drivers = Driver::factory()
+        $taxis = Taxi::factory()
             ->count(40)
             ->create();
     }
