@@ -16,7 +16,7 @@ class CreateTaxisTable extends Migration
         Schema::create('taxis', function (Blueprint $table) {
             $table->id();
             $table->string('model', 50);
-            $table->string('color', 20);
+            $table->string('color', 20)->nullable();
             $table->integer('kilometers');
             $table->string('reg_plate', 20);
             $table->timestamps();
