@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\DriveController;
+use App\Http\Controllers\DriverController;
+use App\Http\Controllers\ShiftController;
+use App\Http\Controllers\TaxiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('driver', DriverController::class);
+Route::resource('taxi', TaxiController::class);
+Route::resource('shift', ShiftController::class);
+Route::resource('drive', DriveController::class);
