@@ -15,7 +15,7 @@ class TaxiSeeder extends Seeder
     public function run()
     {
         $taxis = Taxi::factory()
-            ->count(40)
+            ->count(120)
             ->create();
     }
 }

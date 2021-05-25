@@ -19,7 +19,7 @@ class ShiftSeeder extends Seeder
         $shifts = Shift::factory()
             ->has(Driver::factory())
             ->has(Taxi::factory())
-            ->count(40)
+            ->count(120)
             ->create();
     }
 }

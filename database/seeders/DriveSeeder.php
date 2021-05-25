@@ -17,7 +17,7 @@ class DriveSeeder extends Seeder
     {
         $drives = Drive::factory()
             ->has(Shift::factory())
-            ->count(40)
+            ->count(120)
             ->create();
     }
 }

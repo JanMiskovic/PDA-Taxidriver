@@ -16,7 +16,7 @@ class DriveController extends Controller
      */
     public function index()
     {
-        $drives = Drive::all();
+        $drives = Drive::paginate(30);
         return view('drive.index', compact('drives') );
     }
 
