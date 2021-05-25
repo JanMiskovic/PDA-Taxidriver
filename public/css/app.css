@@ -103,6 +103,11 @@ a:hover {
     text-decoration: none;
     transition: color 0.4s, font-size 0.3s;
 }
+  
+.navlink:hover {
+    color: var(--primary-color);
+    font-size: 25px;
+}
 
 .logo {
     display: block;
@@ -132,6 +137,10 @@ a:hover {
 
 .indexboxes {
     min-height: 200px;
+}
+
+.indexboxes:hover {
+    transform: scale;
 }
 
 .grid-wrapper {

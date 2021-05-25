@@ -14,7 +14,7 @@ class TaxiController extends Controller
      */
     public function index()
     {
-        $taxi = Taxi::paginate(30);
+        $taxis = Taxi::paginate(30);
         return view('taxi.index', compact('taxis'));
     }
 
