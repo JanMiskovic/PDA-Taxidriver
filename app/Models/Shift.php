@@ -18,18 +18,18 @@ class Shift extends Model
         'id_taxi',
     ];
 
-    public function Drive(): hasMany
+    public function drive(): hasMany
     {
         return $this->hasMany(Drive::class);
     }
 
-    public function Driver(): BelongsTo
+    public function driver(): BelongsTo
     {
-        return $this->belongsTo(Driver::class);
+        return $this->belongsTo(Driver::class, 'id_driver');
     }
 
-    public function Taxi(): BelongsTo
+    public function taxi(): BelongsTo
     {
-        return $this->belongsTo(Taxi::class);
+        return $this->belongsTo(Taxi::class, 'id_taxi');
     }
 }

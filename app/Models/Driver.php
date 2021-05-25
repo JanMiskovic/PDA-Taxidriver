@@ -18,7 +18,7 @@ class Driver extends Model
         'birth_date',
     ];
 
-    public function Shift(): hasMany
+    public function shift(): hasMany
     {
         return $this->hasMany(Shift::class);
     }

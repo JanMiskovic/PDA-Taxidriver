@@ -9,15 +9,10 @@ use Illuminate\Http\Request;
 
 class ShiftController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $shift = Shift::all();
-        return view('shift.index', compact('shifts') );
+        $shifts = Shift::paginate(30);
+        return view('shift.index', compact('shifts'));
     }
 
     /**

@@ -23,9 +23,12 @@ class ShiftFactory extends Factory
      */
     public function definition()
     {
+        $date = $this->faker->date();
+        $time = $this->faker->time('H:i', 'now');
+
         return [
-            'start' => $this->faker->dateTime(),
-            'end' => $this->faker->dateTime(),
+            'start' => $date . " " . $time,
+            'end' => $date . " " . date('H:i', strtotime($time . "+" . rand(120,720) . " minute")),
             'id_driver' => Driver::factory(),
             'id_taxi' => Taxi::factory(),
         ];

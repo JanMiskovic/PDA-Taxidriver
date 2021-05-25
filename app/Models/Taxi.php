@@ -17,7 +17,7 @@ class Taxi extends Model
         'reg_plate',
     ];
 
-    public function Shift(): hasMany
+    public function shift(): hasMany
     {
         return $this->hasMany(Shift::class);
     }

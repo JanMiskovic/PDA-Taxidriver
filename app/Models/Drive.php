@@ -18,8 +18,8 @@ class Drive extends Model
         'fare',
     ];
 
-    public function Shift(): BelongsTo
+    public function shift(): BelongsTo
     {
-        return $this->BelongsTo(Shift::class);
+        return $this->BelongsTo(Shift::class, 'id_shift');
     }
 }
