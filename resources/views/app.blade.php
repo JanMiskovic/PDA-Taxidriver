@@ -18,6 +18,7 @@
         <a href="{{ route('taxi.index') }}" class="navlink {{ Request::is('taxi*') ? 'active-nav' : '' }}">Taxis</a>
         <a href="{{ route('shift.index') }}" class="navlink {{ Request::is('shift*') ? 'active-nav' : '' }}">Shifts</a>
         <a href="{{ route('drive.index') }}" class="navlink {{ Request::is('drive') || Request::is('drive/*') ? 'active-nav' : '' }}">Drives</a>
+        <a href="{{ route('stats.index') }}" class="navlink {{ Request::is('stats') ? 'active-nav' : '' }}" style="margin-top: auto">Statistics</a>
     </div>
 
     <div class="overlay"></div>
@@ -26,6 +27,7 @@
         @yield('content')
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   </body>

@@ -4,6 +4,7 @@ use App\Http\Controllers\DriveController;
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\ShiftController;
 use App\Http\Controllers\TaxiController;
+use App\Http\Controllers\StatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,4 @@ Route::resource('driver', DriverController::class);
 Route::resource('taxi', TaxiController::class);
 Route::resource('shift', ShiftController::class);
 Route::resource('drive', DriveController::class);
-Route::resource('stats', DriveController::class);
+Route::resource('stats', StatController::class);
