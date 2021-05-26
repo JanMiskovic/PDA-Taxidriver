@@ -13,8 +13,8 @@
             @if($shift->exists)
                 @method('PATCH')
             @endif
-            <label for="driver" class="form-label">Driver</label>
-            <select id="driver" class="form-select" name="driver" id="driver" required>
+            <label for="id_driver" class="form-label">Driver</label>
+            <select class="form-select" name="id_driver" id="id_driver" required>
                         @unless($shift->exists)
                             <option selected></option>
                         @endunless
@@ -24,8 +24,9 @@
                             </option>
                         @endforeach
             </select>            
-            <label for="taxi" class="form-label">Taxi</label>
-            <select class="form-select" id="taxi" name="taxi" required>
+            
+            <label for="id_taxi" class="form-label">Taxi</label>
+            <select class="form-select" id="id_taxi" name="id_taxi" required>
                         @unless($shift->exists)
                             <option selected></option>
                         @endunless
@@ -34,11 +35,14 @@
                                 {{ $taxi->model }} ({{ $taxi->reg_plate }})
                             </option>
                         @endforeach
-                    </select>
-                    <label for="start" class="form-label">Start</label>
+            </select>
+
+            <label for="start" class="form-label">Start</label>
             <input value="{{ date('Y-m-d\TH:i', strtotime(old('start', $shift->start))) }}" type="datetime-local" name="start" class="form-control" id="start" required>
+            
             <label for="end" class="form-label">End</label>
             <input value="{{ date('Y-m-d\TH:i', strtotime(old('end', $shift->end))) }}" type="datetime-local" name="end" class="form-control" id="end" required>
+            
             <button class="neu-button submit-button" type="submit">Submit</button>
         </form>
     </div>

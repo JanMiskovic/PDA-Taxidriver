@@ -37,7 +37,7 @@ class ShiftController extends Controller
      */
     public function store(Request $request)
     {
-        $shifts = Shift::create($request->all());
+        $shift = Shift::create($request->all());
         return redirect()->route('shift.index');
     }
 

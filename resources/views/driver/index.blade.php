@@ -42,7 +42,7 @@
         </tbody>
     </table>
 
-    <div class="controls">
+    <div class="controls-bottom">
         {{ $drivers->links() }}
         <a class="neu-button" href="{{ route('driver.create') }}">Create new Driver</a>
     </div>

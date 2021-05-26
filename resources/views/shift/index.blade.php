@@ -49,9 +49,9 @@
         </tbody>
     </table>
 
-    <div class="controls">
+    <div class="controls-bottom">
         {{ $shifts->links() }}
-        <a class="neu-button" href="{{ route('driver.create') }}">Create new Shift</a>
+        <a class="neu-button" href="{{ route('shift.create') }}">Create new Shift</a>
     </div>
 
 @endsection

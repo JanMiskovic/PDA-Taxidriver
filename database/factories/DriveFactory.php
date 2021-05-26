@@ -23,11 +23,13 @@ class DriveFactory extends Factory
     public function definition()
     {
         $distance = $this->faker->randomFloat(3, 0, 50);
+        $date = $this->faker->date();
+        $time = $this->faker->time('H:i', 'now');
 
         return [
             'id_shift' => Shift::factory(),
-            'start' => $this->faker->dateTime(),
-            'end' => $this->faker->dateTime(),
+            'start' => $date . " " . $time,
+            'end' => $date . " " . date('H:i', strtotime($time . "+" . rand(2, 60) . " minute")),
             'distance' => $distance,
             'fare' => $distance * 3,
         ];

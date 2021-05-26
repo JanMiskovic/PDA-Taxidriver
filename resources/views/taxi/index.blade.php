@@ -42,7 +42,7 @@
         </tbody>
     </table>
 
-    <div class="controls">
+    <div class="controls-bottom">
         {{ $taxis->links() }}
         <a class="neu-button" href="{{ route('taxi.create') }}">Create new Taxi</a>
     </div>

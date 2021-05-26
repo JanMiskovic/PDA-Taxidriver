@@ -10,7 +10,7 @@
             <h2>End: <b>{{ $shift->end }}</b></h2>
             <h2>Length: <b>{{ date('H:i', strtotime($shift->end) - strtotime($shift->start)) }}</b></h2>
             @if(!empty($shift->driver))
-            <h2>Driver: <b>{{ $shift->driver->first_name }} {{ $shift->driver->last_name }}</b></h2>
+            <h2>Driver: <b>{{ $shift->driver->first_name }} {{ $shift->driver->last_name }} ({{ $shift->driver->phone }})</b></h2>
             @else
             <h2>Driver: <b>Driver Deleted</b></h2>
             @endif

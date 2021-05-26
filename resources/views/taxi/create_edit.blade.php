@@ -18,7 +18,7 @@
             <label for="color" class="form-label">Color</label>
             <input value="{{ old('color', $taxi->color) }}" type="text" name="color" class="form-control" id="color" maxlength="20">
             <label for="kilometers" class="form-label">Kilometers</label>
-            <input value="{{ old('kilometers', $taxi->kilometers) }}" type="number" name="kilometers" class="form-control" id="kilometers" required max="1000000">
+            <input value="{{ old('kilometers', $taxi->kilometers) }}" type="number" name="kilometers" class="form-control" id="kilometers" required min="0" max="1000000">
             <label for="reg_plate" class="form-label">Registration Plate</label>
             <input value="{{ old('reg_plate', $taxi->reg_plate) }}" type="text" name="reg_plate" class="form-control" id="reg_plate" required maxlength="20">
             <button class="neu-button submit-button" type="submit">Submit</button>
