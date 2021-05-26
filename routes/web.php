@@ -25,3 +25,4 @@ Route::resource('driver', DriverController::class);
 Route::resource('taxi', TaxiController::class);
 Route::resource('shift', ShiftController::class);
 Route::resource('drive', DriveController::class);
+Route::resource('stats', DriveController::class);

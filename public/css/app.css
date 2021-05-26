@@ -104,7 +104,7 @@ a:hover {
     transition: color 0.4s, font-size 0.3s;
 }
   
-.navlink:hover {
+.navlink:hover, .active-nav {
     color: var(--primary-color);
     font-size: 25px;
 }
@@ -135,18 +135,12 @@ a:hover {
     min-height: 100vh;
 }
 
-.indexboxes {
-    min-height: 200px;
-}
-
-.indexboxes:hover {
-    transform: scale;
-}
-
 .grid-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     column-gap: calc(20px + 1.2vw);
+    row-gap: calc(20px + 1.2vw);;
     font-size: calc(10px + 1.5vw);
 }
 
@@ -161,6 +155,18 @@ a:hover {
     background: var(--bgcolor);
     box-shadow:  11px 11px 30px #b8b8b8,
                 -11px -11px 30px #ffffff;
+    transition: all 0.3s;
+}
+
+.grid-item:hover {
+    box-shadow:  7px 7px 15px #b8b8b8,
+                -7px -7px 15px #ffffff;
+}
+
+.stat {
+    grid-column-start: 2;
+    grid-column-end: 4;
+
 }
 
 .controls {

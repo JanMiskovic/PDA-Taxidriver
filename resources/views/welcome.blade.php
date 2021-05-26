@@ -3,10 +3,11 @@
 @section('content')
 
 <div class="grid-wrapper">
-  <a href="{{ route('driver.index') }}"><div class="grid-item">Drivers</div></a>
-  <a href="{{ route('taxi.index') }}"><div class="grid-item">Taxis</div></a>
-  <a href="{{ route('shift.index') }}"><div class="grid-item">Shifts</div></a>
-  <a href="{{ route('drive.index') }}"><div class="grid-item">Drives</div></a>
+  <a class="grid-item" href="{{ route('driver.index') }}">Drivers</a>
+  <a class="grid-item" href="{{ route('taxi.index') }}">Taxis</a>
+  <a class="grid-item" href="{{ route('shift.index') }}">Shifts</a>
+  <a class="grid-item" href="{{ route('drive.index') }}">Drives</a>
+  <a class="grid-item stat" href="{{ route('stats.index') }}">Statistics</a>
 </div>
 
 @endsection

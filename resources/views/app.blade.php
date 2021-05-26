@@ -14,10 +14,10 @@
 
     <div class="sidebar">
         <a href="{{ url('/') }}" class="logo">TAXIDRIVER</a>
-        <a href="{{ route('driver.index') }}" class="navlink">Drivers</a>
-        <a href="{{ route('taxi.index') }}" class="navlink">Taxis</a>
-        <a href="{{ route('shift.index') }}" class="navlink">Shifts</a>
-        <a href="{{ route('drive.index') }}" class="navlink">Drives</a>
+        <a href="{{ route('driver.index') }}" class="navlink {{ Request::is('driver*') ? 'active-nav' : '' }}">Drivers</a>
+        <a href="{{ route('taxi.index') }}" class="navlink {{ Request::is('taxi*') ? 'active-nav' : '' }}">Taxis</a>
+        <a href="{{ route('shift.index') }}" class="navlink {{ Request::is('shift*') ? 'active-nav' : '' }}">Shifts</a>
+        <a href="{{ route('drive.index') }}" class="navlink {{ Request::is('drive') || Request::is('drive/*') ? 'active-nav' : '' }}">Drives</a>
     </div>
 
     <div class="overlay"></div>
