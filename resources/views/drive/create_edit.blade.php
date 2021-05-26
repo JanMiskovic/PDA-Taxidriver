@@ -22,7 +22,7 @@
                             <option value="{{ $shift->id }}"{{ $shift->id === old('id_shift', $drive->shift->id ?? '') ? ' selected' : '' }}>
                                 {{ date('d. m. Y', strtotime($shift->start)) }} - 
                                 @if(!empty($shift->driver))
-                                    {{ $shift->driver->first_name }} {{ $shift->driver->last_name }} ({{ $shift->driver->phone }}
+                                    {{ $shift->driver->first_name }} {{ $shift->driver->last_name }} ({{ $shift->driver->phone }})
                                 @else
                                     Driver Deleted
                                 @endif

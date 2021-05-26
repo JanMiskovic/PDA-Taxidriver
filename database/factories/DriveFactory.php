@@ -27,7 +27,7 @@ class DriveFactory extends Factory
         $time = $this->faker->time('H:i', 'now');
 
         return [
-            'id_shift' => Shift::factory(),
+            'id_shift' => $this->faker->numberBetween(1,600),
             'start' => $date . " " . $time,
             'end' => $date . " " . date('H:i', strtotime($time . "+" . rand(2, 60) . " minute")),
             'distance' => $distance,
